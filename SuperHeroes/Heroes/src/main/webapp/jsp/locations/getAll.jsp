@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Controller Page</title>
+        <title>Sightings</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">        
         <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Knewave|Oswald" rel="stylesheet">
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" type="image/x-icon" />
@@ -27,10 +28,50 @@
                 </nav>
             </div>
             <div class="logo">
-                <h1><span><img src="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" style="width: 150px; height: auto"></span>uper Locations
+                <h1><span><img src="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" style="width: 150px; height: auto"></span>uper 
+                    <span><img src="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" style="width: 150px; height: auto"></span>ightings
                 </h1>
             </div>
-            <h1>Add Power</h1>
+            <h3>The Most Up-to-Date List of Supers in the World!</h3>
+            <div class="outputList">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Super</th> 
+                            <th>Description</th>
+                            <th>Powers</th>
+                            <th>Edit/Delete</th>
+                        </tr>
+                    </thead>
+                    <c:forEach var="hero" items="${heroes}">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <c:out value="${hero.name}"/>
+                                </td>
+                                <td>
+                                    <c:out value="${hero.description}"/>
+                                </td>
+                                <td>
+                                    <c:forEach var="power" items="${hero.powers}">
+                                        <c:out value="${power.name}"/>
+                                    </c:forEach>
+                                </td>
+                                <td>
+                                    <a href="${pageContext.request.contextPath}/heroes/update/${hero.heroId}">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </a>
+                                    /
+                                    <a href="${pageContext.request.contextPath}/heroes/delete/${hero.heroId}">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </c:forEach>
+
+                </table>
+            </div>
 
         </div>
         <!-- Placed at the end of the document so the pages load faster -->

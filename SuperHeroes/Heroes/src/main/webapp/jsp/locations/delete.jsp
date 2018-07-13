@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Controller Page</title>
+        <title>Delete Sighting</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">        
         <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Knewave|Oswald" rel="stylesheet">
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" type="image/x-icon" />
@@ -30,7 +31,15 @@
                 <h1><span><img src="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" style="width: 150px; height: auto"></span>uper Locations
                 </h1>
             </div>
-            <h1>Add Power</h1>
+            <div class="container">
+                <h1>Delete a Location</h1>
+                <p>Did it explode or something? Go ahead, do your worst.</p>
+                <h3>Name: "${location.name}"</h3>
+                <h3>Description: "${location.description}"</h3>
+                <a href="${pageContext.request.contextPath}/locations/confirmDelete/${location.locationId}">
+                    <button class="btn btn-default" name="location">Delete Location</button>
+                </a>
+            </div>
 
         </div>
         <!-- Placed at the end of the document so the pages load faster -->

@@ -158,6 +158,21 @@ public class HeroServiceImpl implements HeroServiceLayer {
         return dao.getAllLocations();
     }
     
+    @Override
+    public Location getLocation(Integer id){
+        return dao.getLocationById(id);
+    }
+    
+    @Override
+    public Location updateLocation(Location location){
+        return dao.updateLocation(location);
+    }
+    
+    @Override
+    public void deleteLocation(Integer id){
+        dao.deleteLocation(id);
+    }
+    
 //       _____ _____ _____ _    _ _______ _____ _   _  _____  _____ 
 //  / ____|_   _/ ____| |  | |__   __|_   _| \ | |/ ____|/ ____|
 // | (___   | || |  __| |__| |  | |    | | |  \| | |  __| (___  
@@ -202,6 +217,11 @@ public class HeroServiceImpl implements HeroServiceLayer {
     @Override
     public void addSighting(Sighting sighting) {
         dao.addSighting(sighting);
+    }
+
+    @Override
+    public void deleteSighting(Integer id) {
+        dao.deleteSighting(id);
     }
     
 }

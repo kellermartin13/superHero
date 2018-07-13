@@ -556,7 +556,7 @@ public class HeroesDaoImpl implements HeroesDao {
 
     //GET ALL LOCATIONS
     private static final String SQL_ALL_LOCATIONS
-            = "SELECT * FROM Locations";
+            = "SELECT * FROM Locations ORDER BY Country";
 
     @Override
     public List<Location> getAllLocations() {

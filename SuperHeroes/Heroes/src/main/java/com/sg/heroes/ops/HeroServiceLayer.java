@@ -44,6 +44,9 @@ public interface HeroServiceLayer {
     //locations
     public void addNewLocation(Location l);
     public List<Location> getAllLocations();
+    public Location getLocation(Integer id);
+    public Location updateLocation(Location location);
+    public void deleteLocation(Integer id);
     
     //sightings
     public List<Sighting> getAllSightings();
@@ -52,4 +55,5 @@ public interface HeroServiceLayer {
     public List<Sighting> getSightingsByDate(LocalDate date);
     public List<Sighting> getRecentSightings();
     public void addSighting(Sighting sighting);
+    public void deleteSighting(Integer id);
 }

@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Controller Page</title>
+        <title>Sightings</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">        
         <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Knewave|Oswald" rel="stylesheet">
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" type="image/x-icon" />
@@ -30,8 +31,78 @@
                 <h1><span><img src="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" style="width: 150px; height: auto"></span>uper Locations
                 </h1>
             </div>
-            <h1>Add Power</h1>
+<!--            <div class="container col-md-8 col-md-offset-2">
+                <form action="${pageContext.request.contextPath}/sightings/getByHero">
+                    <div class="form-group col-md-4">
+                        <label for="heroes">Select Hero:</label>
+                        <select class="form-control" name="heroId">
+                            <c:forEach var="hero" items="${heroes}">
+                                <option value="${hero.heroId}">${hero.name}</option>
+                            </c:forEach>
+                        </select>
+                        <input type="submit" class="btn btn-default" value="Search By Hero">
+                    </div>
+                </form>
+                <form action="${pageContext.request.contextPath}/sightings/getByLocation">
+                    <div class="form-group col-md-4">
+                        <label for="locations">Select Location:</label>
+                        <select class="form-control" name="locationId">
+                            <c:forEach var="location" items="${locations}">
+                                <option value="${location.locationId}">${location.name}</option>
+                            </c:forEach>
+                        </select>
+                        <input type="submit" class="btn btn-default" value="Search By Location">
+                    </div>
+                </form>
+                <form action="${pageContext.request.contextPath}/sightings/getByDate">
+                    <div class="form-group col-md-4">
+                        <label for="date">Select Date:</label>
+                        <input type="date" name="date" class="form-control">
+                        <input type="submit" class="btn btn-default" value="Search By Date">
+                    </div>
+                </form> 
+            </div>-->
+            <div class="outputList col-md-8 col-md-offset-2">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th>Edit/Delete</th>
+                        </tr>
+                    </thead>
+                    <c:forEach var="location" items="${locations}">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <c:out value="${location.name}"/>
+                                </td>
+                                <td>
+                                    ${location.address}
+                                </td>
+                                <td>
+                                    ${location.city}
+                                </td>
+                                <td>
+                                    ${location.country}
+                                </td>
+                                <td>
+                                    <a href="${pageContext.request.contextPath}/locations/update/${location.locationId}">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </a>
+                                    /
+                                    <a href="${pageContext.request.contextPath}/locations/delete/${location.locationId}">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </c:forEach>
 
+                </table>
+            </div>        
         </div>
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="${pageContext.request.contextPath}/js/jquery-3.1.1.min.js"></script>

@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS SuperHero_Test;
-CREATE DATABASE SuperHero_Test;
-USE SuperHero_Test;
+DROP DATABASE IF EXISTS SuperHero;
+CREATE DATABASE SuperHero;
+USE SuperHero;
 
 CREATE TABLE Sightings (
 	id INT NOT NULL auto_increment,
@@ -14,8 +14,10 @@ CREATE TABLE Locations (
     locationName VARCHAR(50) NOT NULL,
     description VARCHAR(150) NOT NULL,
     address VARCHAR(250) NOT NULL,
-    latitude VARCHAR(20) NOT NULL,
-    longitude VARCHAR(20) NOT NULL,
+    city VARCHAR(75) NOT NULL, 
+    country VARCHAR(75) NOT NULL,
+    latitude VARCHAR(20) Null,
+    longitude VARCHAR(20) NULL,
     PRIMARY KEY (id)
 );
 

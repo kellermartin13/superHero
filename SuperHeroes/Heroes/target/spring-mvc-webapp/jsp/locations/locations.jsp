@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Controller Page</title>
+        <title>Super Locations</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">        
         <link href="${pageContext.request.contextPath}/css/heroes.css" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Knewave|Oswald" rel="stylesheet">
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/lightning-bolt-crop.jpg" type="image/x-icon" />
@@ -33,17 +34,19 @@
             <div class="container options">
                 <div class="addBox">
                     <h3>Add A New Location</h3>
-                    <p>Is our database not </p>
-                    <a href="${pageContext.request.contextPath}/addPower">
-                        <button class="btn btn-default" id="addBtn">Add Power</button>
+                    <p>Update our database! We want all the locations.</p>
+                    <a href="${pageContext.request.contextPath}/locations/add">
+                        <button class="btn btn-default" id="addBtn">
+                            Add Location</button>
                     </a>
                 </div>
                 <hr />
                 <div class="allBox">
-                    <h3>Check Out All The Powers</h3>
-                    <p>Here's all the recorded super powers. Check them out!</p>
-                    <a href="${pageContext.request.contextPath}/getAllPowers">
-                        <button class="btn btn-default" id="addBtn">Get Powers</button>
+                    <h3>See All Locations</h3>
+                    <p>See a comprehensive list of locations in our database.</p>
+                    <a href="${pageContext.request.contextPath}/locations/get">
+                        <button class="btn btn-default" id="addBtn">
+                            Location Search</button>
                     </a>
                 </div>
             </div>

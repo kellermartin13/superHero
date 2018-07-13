@@ -136,6 +136,8 @@ public class SightingController {
         l.setDescription("locDesc");
         service.addNewLocation(l);
         sight.setLocation(l);
+        
+        service.addSighting(sight);
 
         data.addAttribute("sighting", sight);
         data.addAttribute("date", date);

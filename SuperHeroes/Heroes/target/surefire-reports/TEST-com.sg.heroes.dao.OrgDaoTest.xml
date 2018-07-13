@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="com.sg.heroes.dao.OrgDaoTest" time="2.086" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="com.sg.heroes.dao.OrgDaoTest" time="1.634" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
@@ -62,9 +62,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="updateOrg" time="0.363"/>
-  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="getOrgsByLocationId" time="0.536"/>
-  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="addGetOrg" time="0.305"/>
-  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="getOrgsByHeroId" time="0.434"/>
-  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="deleteGetAllOrg" time="0.381"/>
+  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="updateOrg" time="0.044"/>
+  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="getOrgsByLocationId" time="0.368"/>
+  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="addGetOrg" time="0.267"/>
+  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="getOrgsByHeroId" time="0.486"/>
+  <testcase classname="com.sg.heroes.dao.OrgDaoTest" name="deleteGetAllOrg" time="0.39"/>
 </testsuite>
